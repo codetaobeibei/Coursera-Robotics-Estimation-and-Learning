@@ -51,9 +51,9 @@ zlabel('Blue');
 D = 3;
 u=zeros(1,D);
 sigma = zeros(1,D);
-for i = i:D
+for i = 1:D
     u(i) = mean(Samples(:,i));
-    sigma(i) = cov(Samples(:,i));
+    sigma(i) = cov(double(Samples(:,i)));
 end
 disp(u)
 disp(sigma)
